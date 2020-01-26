@@ -2,7 +2,7 @@
 session_start();
 
 $filer = fopen("users.mndb",'r')
-$db = fread(filer);
+$db = fread($filer);
 fclose($filer);
 
 $hashed = password_hash($conn->real_escape_string($_POST['pword']),PASSWORD_BCRYPT);
