@@ -1,14 +1,9 @@
 <?php 
 session_start();
 
-$filer = fopen("users.mndb",'r');
-$db = fread($filer);
-fclose($filer);
-echo $db;
 $hashed = password_hash($_POST['pword'],PASSWORD_BCRYPT);
 
-$db+="\n";
-$dbfile = fopen("users.mndb",'w');
+$dbfile = fopen("users.mndb",'a');
 fwrite($dbfile,$db+$_POST['name']+'^'+$_POST['email']+'^'+$_POST['uname']+'^'+$hashed);
 fclose($dbfile);
 
