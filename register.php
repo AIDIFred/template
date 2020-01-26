@@ -12,10 +12,10 @@
 		<input class="form-control" name="uname" id="uname" required>
 		
 		<span class="text">Password</span>
-		<input class="form-control" name="pword" id="pword" type="password" required>
+		<input class="form-control" name="pword" id="pword" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 		
 		<span class="text">Confirm Password</span>
-		<input class="form-control" name="cpword" id="cpword" type="password" required>
+		<input class="form-control" name="cpword" id="cpword" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 		<br>
 		<button class="btn btn-light">Submit</button>
 	</form>
@@ -24,6 +24,7 @@
 		function validate() {
 			if (document.getElementById('pword').value!==document.getElementById('cpword').value) {
 				return false;
+				alert("Passwords do not match");
 			} else {
 				return true;
 			}
