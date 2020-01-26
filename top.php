@@ -28,7 +28,7 @@
 		<div class="navlog trow">
 			<?php 
 				if (!isset($_SESSION['uname'])) {
-					echo "<span class='login-btn' onclick='window.location.replace(\"login.php\")'>Login</span> <span class='register-btn'onclick='window.location.replace(\"register.php\")'>Register</span>";
+					echo "<span class='login-btn' onclick='window.location.replace(\"login.php\")'>Login</span>&nbsp;<span class='register-btn'onclick='window.location.replace(\"register.php\")'>Register</span>";
 				} else {
 					echo "<span class='logout-btn' onclick='window.location.replace(\"logout.php\")'>Logout</span>";
 				}
