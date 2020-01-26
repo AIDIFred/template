@@ -1,0 +1,32 @@
+body,html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.tbody {
+	display: flex;
+	flex-direction: column;
+}
+
+.trow {
+	display: flex;
+	flex-direction: row;
+}
+
+.nav_container {
+	width: 100%;
+	height: 8vh;
+	background-color: lightgrey;
+	padding: 4px;
+}
+
+.navcell {
+	color: white;
+	text-align: center;
+	font-family: arial;
+	font-size: 20px;
+	cursor: pointer;
+}
