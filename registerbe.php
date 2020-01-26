@@ -1,7 +1,7 @@
 <?php 
 session_start();
-/*
-$filer = fopen("users.mndb",'r')
+
+$filer = fopen("users.mndb",'r');
 $db = fread($filer);
 fclose($filer);
 
@@ -12,7 +12,7 @@ $dbfile = fopen("users.mndb",'w');
 fwrite($dbfile,$db+$_POST['name']+'^'+$_POST['email']+'^'+$_POST['uname']+'^'+$hashed);
 fclose($dbfile);
 
-*/
+
 
 ?>
 
