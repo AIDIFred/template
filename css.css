@@ -27,9 +27,20 @@ body,html {
 	color: #444444;
 	text-align: center;
 	font-family: calibri;
-	font-size: 28px;
+	font-size: 24px;
 	cursor: pointer;
 	vertical-align: center;
 	top:1px;
 	min-width: 15%;
+}
+
+.login-btn, .register-btn, .logout-btn {
+	color: black;
+	text-align: center;
+	font-family: calibri;
+	font-size: 20px;
+	cursor: pointer;
+	vertical-align: center;
+	top:1px;
+	min-width: 10%;
 }
