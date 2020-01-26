@@ -1,19 +1,17 @@
 <?php 
 session_start();
-$conn = new MySQLi("localhost", "e8280501_minn", "MinnePear.420", "e8280501_change4schools");
-if (!$conn) {
-	die("No database connection");
-}
+
+$filer = fopen("users.mndb",'r')
+$db = fread(filer);
+fclose($filer);
 
 $hashed = password_hash($conn->real_escape_string($_POST['pword']),PASSWORD_BCRYPT);
 
-$query="INSERT INTO users ('name','email','uname','pword') VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['uname']."','".$hashed."')";
+$db+="\n";
+$dbfile = fopen("users.mndb",'w');
+fwrite($dbfile,$db+$_POST['name']+'^'+$_POST['email']+'^'+$_POST['uname']+'^'+$hashed);
+fclose($dbfile);
 
-$result = $conn->query($query);
-
-echo "updated?";
-echo $mysqli->error;
-echo "WAT";
 
 
 ?>
