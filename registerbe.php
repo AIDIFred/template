@@ -12,6 +12,8 @@ $query="INSERT INTO users ('name','email','uname','pword') VALUES ('".$_POST['na
 $result = $conn->query($query);
 
 echo "updated?";
+echo $mysqli->error;
+echo "WAT";
 
 
 ?>
